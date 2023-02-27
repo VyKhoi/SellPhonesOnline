@@ -74,7 +74,7 @@ function HeaderType() {
             <div class="row">
               <div class="col">
                 <div class="small-box">
-                  <a href="#">
+                  <a>
                     <img src="https://cdn2.cellphones.com.vn/690x300,webp,q10/https://dashboard.cellphones.com.vn/storage/msi%20right.jpg"></img>
                   </a>{" "}
                 </div>

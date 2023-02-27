@@ -3,11 +3,11 @@ import { Carousel } from "react-bootstrap";
 function CarouselHeaderType() {
   const items = [
     {
-      src: "https://static.vecteezy.com/system/resources/previews/014/471/152/non_2x/black-friday-sale-banner-promotion-black-white-geometric-on-blue-layout-design-vector.jpg",
+      src: "https://img.freepik.com/premium-vector/paper-art-shopping-online-smartphone-new-buy-sale-promotion-pink-backgroud-banner-market_238174-244.jpg?w=1060",
       caption: "Khai trương mùa hè tưng bừng khuyến mãi",
     },
     {
-      src: "https://static.vecteezy.com/system/resources/previews/000/695/798/non_2x/modern-super-sale-banner-background-vector.jpg",
+      src: "https://img.freepik.com/premium-vector/paper-art-shopping-online-smartphone-new-buy-sale-promotion-pink-backgroud-banner-market_238174-248.jpg?w=1060",
       caption: "Second Slide",
     },
     {
