@@ -3,6 +3,9 @@ import HeaderType from "./component/layout/component/headerType";
 import HomeBody from "./component/layout/component/homeBody";
 
 import Footer from "./component/layout/component/footer";
+import CellPhoneCard from "./component/layout/component/cardCellphone";
+
+import Home from "./pages/home";
 function App() {
   return (
     <div className="App">
@@ -24,6 +27,9 @@ function App() {
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      <CellPhoneCard></CellPhoneCard>
+
+      {/* <Home></Home> */}
       <Footer></Footer>
     </div>
   );

@@ -10,30 +10,6 @@ import StickyBox from "react-sticky-box";
 import { useState, useEffect } from "react";
 
 function Header() {
-  // const [scroll, setScroll] = useState(0);
-
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     console.log(window.scrollY);
-
-  //     if (window.scrollY > 800) {
-  //       console.log("co vao");
-  //       setScroll({
-  //         position: "fixed",
-  //         top: 0,
-  //         left: 0,
-  //         right: 0,
-  //       });
-  //     }
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   const sticky = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -110,7 +86,7 @@ function Header() {
           id="ftco-navbar"
         >
           <div className="container">
-            <a className="navbar-brand" href="index.html">
+            <a className="navbar-brand " id="logo_navbar" href="index.html">
               Papermag <span>Magazine</span>
             </a>
             <form
