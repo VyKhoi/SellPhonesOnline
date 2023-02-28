@@ -31,8 +31,8 @@ function CellPhoneCard(product) {
               <i class="fa-regular fa-circle-check"></i>
             </div>
             <div className="details">
-              <h1>Chair</h1>
-              <p>Added to your cart</p>
+              <h1 style={{ fontSize: "1.5vw" }}>Sản phẩm</h1>
+              <span>đã thêm vào giỏ</span>
             </div>
             <div className="remove" onClick={UnClicked}>
               <i class="fa-solid fa-xmark"></i>
@@ -42,7 +42,7 @@ function CellPhoneCard(product) {
       </div>
       <div className="inside">
         <div className="icon">
-          <i className="material-icons">info_outline</i>
+          <i class="fa-solid fa-eye see_infor_product"></i>
         </div>
         <div className="contents">
           <table>

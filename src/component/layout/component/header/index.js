@@ -15,7 +15,7 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
 
     function handleScroll() {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
 
       if (window.scrollY > 646) {
         sticky.current.classList.add("p_fixed");

@@ -6,6 +6,7 @@ import Footer from "./component/layout/component/footer";
 import CellPhoneCard from "./component/layout/component/cardCellphone";
 
 import Home from "./pages/home";
+import LogCellPhoneCard from "./component/layout/component/logCellPhoneCard";
 function App() {
   return (
     <div className="App">
@@ -27,9 +28,8 @@ function App() {
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <CellPhoneCard></CellPhoneCard>
-
-      {/* <Home></Home> */}
+      {/* <LogCellPhoneCard></LogCellPhoneCard> */}
+      <Home></Home>
       <Footer></Footer>
     </div>
   );

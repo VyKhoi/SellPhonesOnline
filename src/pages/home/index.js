@@ -5,6 +5,7 @@ import LogCellPhoneCard from "../../component/layout/component/logCellPhoneCard"
 function Home() {
   return (
     <Container>
+      <h1>Danh sách điện thoại bán chạy</h1>
       <LogCellPhoneCard></LogCellPhoneCard>
     </Container>
   );

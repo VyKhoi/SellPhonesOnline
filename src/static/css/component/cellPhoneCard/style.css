@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 .wrapper {
-    width: 300px;
-    height: 500px;
+    width: 200px;
+    height: 300px;
     background: white;
 
     position: relative;
@@ -33,7 +37,7 @@
 
 .wrapper .container .bottom {
     width: 200%;
-    height: 20%;
+    height: 30%;
     transition: transform 0.5s;
 }
 
@@ -44,6 +48,7 @@
 .wrapper .container .bottom h1 {
     margin: 0;
     padding: 0;
+    font-size: 1.3vw;
 }
 
 .wrapper .container .bottom p {
@@ -60,7 +65,8 @@
 }
 
 .wrapper .container .bottom .left .details {
-    padding: 20px;
+    /* padding: 20px; */
+    padding-left: 5px;
     float: left;
     width: calc(70% - 40px);
 }
@@ -71,12 +77,14 @@
     height: 100%;
     background: #f1f1f1;
     transition: background 0.5s;
+
     border-left: solid thin rgba(0, 0, 0, 0.1);
 }
 
 .wrapper .container .bottom .left .buy i {
-    font-size: 30px;
-    padding: 30px;
+    margin-top: 30%;
+    margin-left: 20%;
+    font-size: 25px;
     color: #254053;
     transition: transform 0.5s;
 }
@@ -100,9 +108,15 @@
 }
 
 .wrapper .container .bottom .right .details {
-    padding: 20px;
+    /* padding: 20px; */
+
+    /* max-height: 59px; */
     float: right;
-    width: calc(70% - 40px);
+
+    /* width: calc(70% - 40px); */
+    /* background-color: rgb(255, 255, 255); */
+    padding-right: 10px;
+
 }
 
 .wrapper .container .bottom .right .done {
@@ -114,8 +128,9 @@
 }
 
 .wrapper .container .bottom .right .done i {
-    font-size: 30px;
-    padding: 30px;
+    margin-top: 30%;
+    margin-left: 20%;
+    font-size: 25px;
     color: white;
 }
 
@@ -126,6 +141,7 @@
     height: 50%;
     background: #bc3b59;
     transition: transform 0.5s, background 0.5s;
+    border-top-right-radius: 20px;
 }
 
 .wrapper .container .bottom .right .remove:hover {
@@ -133,13 +149,14 @@
 }
 
 .wrapper .container .bottom .right .remove:hover i {
-    transform: translateY(5px);
+    transform: translateY(3px);
 }
 
 .wrapper .container .bottom .right .remove i {
     transition: transform 0.5s;
-    font-size: 30px;
-    padding: 30px;
+    margin-top: 30%;
+    margin-left: 30%;
+    font-size: 25px;
     color: white;
 }
 
@@ -151,12 +168,12 @@
 .wrapper .inside {
     z-index: 9;
     background: #92879b;
-    width: 140px;
-    height: 140px;
+    width: 116px;
+    height: 127px;
     position: absolute;
-    top: -70px;
-    right: -70px;
-    border-radius: 0px 0px 200px 200px;
+    top: -87px;
+    right: -79px;
+    border-radius: 0px 0px 700px 400px;
     transition: all 0.5s, border-radius 2s, top 1s;
     overflow: hidden;
 }
@@ -222,4 +239,10 @@
 
 .cellPhoneCard {
     background-color: red;
+}
+
+.see_infor_product {
+    position: relative;
+    margin-left: -1px;
+    margin-top: 10px;
 }
