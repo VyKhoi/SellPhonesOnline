@@ -51,6 +51,8 @@
     font-size: 1.3vw;
 }
 
+.details span {}
+
 .wrapper .container .bottom p {
     margin: 0;
     padding: 0;
@@ -116,6 +118,9 @@
     /* width: calc(70% - 40px); */
     /* background-color: rgb(255, 255, 255); */
     padding-right: 10px;
+    top: 7px;
+    position: relative;
+
 
 }
 

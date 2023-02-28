@@ -8,8 +8,6 @@ function HomeBody() {
   return (
     <Container>
       <HeaderType></HeaderType>
-      <h1>Danh sách điện thoại bán chạy</h1>
-      <LogCellPhoneCard></LogCellPhoneCard>
     </Container>
   );
 }

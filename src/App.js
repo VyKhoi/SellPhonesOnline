@@ -7,29 +7,17 @@ import CellPhoneCard from "./component/layout/component/cardCellphone";
 
 import Home from "./pages/home";
 import LogCellPhoneCard from "./component/layout/component/logCellPhoneCard";
+
+import LaptopCard from "./component/layout/component/cardLaptop";
+
+import LogLaptopCard from "./component/layout/component/logLaptopCard";
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <HomeBody></HomeBody>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      {/* <LogCellPhoneCard></LogCellPhoneCard> */}
+
       <Home></Home>
+
       <Footer></Footer>
     </div>
   );
