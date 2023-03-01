@@ -14,16 +14,27 @@ import LogLaptopCard from "./component/layout/component/logLaptopCard";
 import CartIcon from "./component/layout/component/iconCart";
 
 import Login from "./pages/login";
+
+import React, { useContext } from "react";
+import CountContext from "./component/counterCart/countContext";
+
+import Test from "./component/layout/phongthinghiem";
 function App() {
+  const { count, setCount } = useContext(CountContext);
+  function add() {
+    setCount(count + 1);
+  }
   return (
     <div className="App">
       <Header></Header>
+      <Test></Test>
 
       <Home></Home>
 
       {/* <Login></Login> */}
 
-      <CartIcon count={3} />
+      <CartIcon count={count} />
+      <button onClick={add}>oke</button>
       <Footer></Footer>
     </div>
   );

@@ -143,36 +143,7 @@ function LogCellPhoneCard() {
 
   return (
     <Slider {...settings} className={"slick_carousel_cellphone_card"}>
-      {/* <div className="container_log_cell_phone"> */}
-      {/* <Container className="log_cell_phone">
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-        </Container> */}
       {container_card}
-      {/* </div> */}
-
-      {/* <div className="container_log_cell_phone">
-        <Container className="log_cell_phone">
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;{" "}
-          <CellPhoneCard className={"card_cellphone"}></CellPhoneCard>;
-        </Container>
-      </div> */}
     </Slider>
   );
 }

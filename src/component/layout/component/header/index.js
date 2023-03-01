@@ -12,6 +12,9 @@ import Login from "../../../../pages/login";
 import { Container } from "react-bootstrap";
 function Header() {
   const sticky = useRef(null);
+
+  const branch = useRef(null);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -44,6 +47,11 @@ function Header() {
       return;
     }
     console.log(showLogin);
+  }
+
+  // handle click change bramch
+  function handleClickBranch(e) {
+    branch.current.innerText = e.target.innerText;
   }
 
   return (
@@ -153,28 +161,37 @@ function Header() {
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
+                    ref={branch}
                   >
                     Cửa Hàng
                   </a>
                   <div className="dropdown_contain">
                     <ul className="dropdown_menu">
                       <li>
-                        <a href="#">Cửa hàng 1</a>
+                        <a href="#!" onClick={handleClickBranch}>
+                          Cửa hàng Chấn Bột
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Cửa hàng 1</a>
+                        <a href="#!" onClick={handleClickBranch}>
+                          Cửa hàng Khôi Trọc
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Cửa hàng 1</a>
+                        <a href="#!" onClick={handleClickBranch}>
+                          Cửa hàng Luân Wibu
+                        </a>
                       </li>
                       <li>
-                        <a href="#">Cửa hàng 1</a>
+                        <a href="#!" onClick={handleClickBranch}>
+                          Cửa hàng Nam mít
+                        </a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="#type_product_nav" className="nav-link">
                     DOANH MỤC
                   </a>
                 </li>

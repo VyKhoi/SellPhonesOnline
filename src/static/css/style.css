@@ -4778,7 +4778,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #1a1c1f;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -5260,7 +5260,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
-  color: #fff;
+  color: #000000;
 }
 
 .navbar-dark .navbar-nav .nav-link {

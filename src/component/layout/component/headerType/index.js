@@ -38,7 +38,7 @@ function HeaderType() {
       <Row className="row_header_Type">
         <Col className="header_type_box" id="header_type_box_1" sm={3}>
           <div className="container_menu_type_product">
-            <ul className="menu_type_product">
+            <ul className="menu_type_product" id="type_product_nav">
               <li onClick={handleSeePhones}>
                 <a href="#!">
                   <i class="fa-solid fa-mobile"></i> Điện thoại{" "}

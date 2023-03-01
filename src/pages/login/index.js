@@ -10,7 +10,7 @@ function Login(props) {
           className="bg order-1 order-md-2 img_login"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1621847468516-1ed5d0df56fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')",
+              "url('https://wallpaperaccess.com/full/210902.jpg')",
           }}
         ></div>
         <div className="contents order-2 order-md-1">

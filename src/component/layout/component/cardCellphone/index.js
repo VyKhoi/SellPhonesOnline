@@ -1,15 +1,19 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import "../../../../static/css/component/cellPhoneCard/style.css";
-
+import CountContext from "../../../counterCart/countContext";
 function CellPhoneCard(product) {
   const click = useRef(null);
+  // counter cart
+  const { count, setCount } = useContext(CountContext);
 
   function Clicked() {
     click.current.classList.add("clicked");
+    setCount(count + 1);
   }
 
   function UnClicked() {
     click.current.classList.remove("clicked");
+    setCount(count - 1);
   }
 
   return (
