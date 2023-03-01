@@ -8,7 +8,8 @@ import MyCarousel from "../carousel";
 
 import StickyBox from "react-sticky-box";
 import { useState, useEffect } from "react";
-
+import Login from "../../../../pages/login";
+import { Container } from "react-bootstrap";
 function Header() {
   const sticky = useRef(null);
   useEffect(() => {
@@ -26,6 +27,24 @@ function Header() {
       }
     }
   }, []);
+
+  // xu ly hover
+  const dropdown = useRef(null);
+
+  // handle click login
+  const showLogin = useRef(null);
+  function handleLogin() {
+    console.log("coclick");
+    if (showLogin.current.classList.contains("d-block") === false) {
+      showLogin.current.classList.add("d-block");
+      return;
+    }
+    if (showLogin.current.classList.contains("d-block")) {
+      showLogin.current.classList.remove("d-block");
+      return;
+    }
+    console.log(showLogin);
+  }
 
   return (
     <section className="ftco-section main_header">
@@ -126,45 +145,47 @@ function Header() {
                     Home
                   </a>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown branch" ref={dropdown}>
                   <a
-                    className="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle "
                     href="#"
                     id="dropdown04"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Page
+                    Cửa Hàng
                   </a>
-                  <div className="dropdown-menu" aria-labelledby="dropdown04">
-                    <a className="dropdown-item" href="#">
-                      Page 1
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Page 2
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Page 3
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Page 4
-                    </a>
+                  <div className="dropdown_contain">
+                    <ul className="dropdown_menu">
+                      <li>
+                        <a href="#">Cửa hàng 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Cửa hàng 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Cửa hàng 1</a>
+                      </li>
+                      <li>
+                        <a href="#">Cửa hàng 1</a>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    Catalog
+                    DOANH MỤC
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    Blog
+                    TRA CỨU ĐƠN HÀNG
                   </a>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={handleLogin}>
                   <a href="#" className="nav-link">
-                    Contact
+                    ĐĂNG NHẬP
                   </a>
                 </li>
               </ul>
@@ -172,6 +193,14 @@ function Header() {
           </div>
         </nav>
       </div>
+
+      <Container ref={showLogin} className={"show_login d-none"}>
+        <Login></Login>
+        <div className="blur_login" onClick={handleLogin}>
+          {/* {" "}
+          <i class="fa-regular fa-circle-xmark close_login"></i> */}
+        </div>
+      </Container>
     </section>
   );
 }

@@ -13,6 +13,8 @@ function Home() {
       <LogCellPhoneCard></LogCellPhoneCard>
       <h1>Laptop bán chạy</h1>
       <LogLaptopCard></LogLaptopCard>
+      <h1>Phụ Kiện</h1>
+      <LogCellPhoneCard></LogCellPhoneCard>
     </Container>
   );
 }

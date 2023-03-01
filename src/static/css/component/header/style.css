@@ -82,3 +82,57 @@ a {
     opacity: 1;
 
 }
+
+.branch:hover .dropdown_menu {
+    display: block;
+}
+
+.dropdown_contain {
+    background-color: red;
+}
+
+.dropdown_menu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 150%;
+    background-color: green;
+    z-index: 99999;
+}
+
+.dropdown_menu a {
+    display: block;
+    background-color: rgb(255, 248, 113);
+    color: black;
+}
+
+.dropdown_menu a:hover {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+}
+
+.blur_login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(17, 17, 18, 0.603);
+    z-index: 10000;
+}
+
+.blur_login .close_login {
+    color: #fbfbfb;
+    /* display: block; */
+    font-size: 30px;
+    position: relative;
+
+    float: right;
+    top: 5%;
+    right: 5%;
+    /* background-color: rgb(0, 0, 0);/ */
+}

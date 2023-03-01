@@ -11,6 +11,9 @@ import LogCellPhoneCard from "./component/layout/component/logCellPhoneCard";
 import LaptopCard from "./component/layout/component/cardLaptop";
 
 import LogLaptopCard from "./component/layout/component/logLaptopCard";
+import CartIcon from "./component/layout/component/iconCart";
+
+import Login from "./pages/login";
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,9 @@ function App() {
 
       <Home></Home>
 
+      {/* <Login></Login> */}
+
+      <CartIcon count={3} />
       <Footer></Footer>
     </div>
   );

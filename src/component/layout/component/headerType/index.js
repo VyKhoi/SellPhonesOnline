@@ -1,25 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../../../static/css/component/headerType/style.css";
 import CarouselHeaderType from "../carouselHeaderType";
-
+import VerticalMenu from "../verticalMenu/indext";
+import MenuItem from "../menuItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faCoffee, faL } from "@fortawesome/free-solid-svg-icons";
 function HeaderType() {
+  // handle hover phone
+  const seePhones = useRef(null);
+  function handleSeePhones() {
+    if (seePhones.current.classList.contains("d-block") === false) {
+      seePhones.current.classList.add("d-block");
+      return;
+    }
+    if (seePhones.current.classList.contains("d-block")) {
+      seePhones.current.classList.remove("d-block");
+      return;
+    }
+  }
+
+  // handle hover Laptop
+  const seeLaptops = useRef(null);
+  function handleSeeLaptops() {
+    if (seeLaptops.current.classList.contains("d-block") === false) {
+      seeLaptops.current.classList.add("d-block");
+      return;
+    }
+    if (seeLaptops.current.classList.contains("d-block")) {
+      seeLaptops.current.classList.remove("d-block");
+      return;
+    }
+  }
+
   return (
     <Container className="container_header_Type">
       <Row className="row_header_Type">
         <Col className="header_type_box" id="header_type_box_1" sm={3}>
           <div className="container_menu_type_product">
             <ul className="menu_type_product">
-              <li>
-                <a href="#">
+              <li onClick={handleSeePhones}>
+                <a href="#!">
                   <i class="fa-solid fa-mobile"></i> Điện thoại{" "}
                   <i class="fa-solid fa-chevron-right arrow_right"></i>
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li onClick={handleSeeLaptops}>
+                <a href="#!">
                   <i class="fa-solid fa-laptop"></i>Laptop{" "}
                   <i class="fa-solid fa-chevron-right arrow_right"></i>
                 </a>
@@ -80,6 +107,86 @@ function HeaderType() {
                 </div>
               </div>
             </div>
+          </div>
+        </Col>
+      </Row>
+
+      <Row
+        ref={seePhones}
+        className="type_product_container type_product_container_phones d-none"
+      >
+        <Col className="type_product_box" sm={8}>
+          <div className="manufactue_product">
+            <h6>Hãng điện thoại</h6>
+            <VerticalMenu>
+              <MenuItem link="#">Apple</MenuItem>
+              <MenuItem link="#">Samsung</MenuItem>
+              <MenuItem link="#">Huawei</MenuItem>
+              <MenuItem link="#">Oppo</MenuItem>
+              <MenuItem link="#">Vivo</MenuItem>
+              <MenuItem link="#">OnePlus</MenuItem>
+              <MenuItem link="#">Google</MenuItem>
+              <MenuItem link="#">Sony</MenuItem>
+              <MenuItem link="#">LG</MenuItem>
+            </VerticalMenu>
+          </div>
+
+          <div className="type_of_price">
+            <h6>Chọn theo mức giá</h6>
+            <VerticalMenu>
+              <MenuItem link="#">Dưới 5 triệu</MenuItem>
+              <MenuItem link="#">Từ 5 đến 10 triệu</MenuItem>
+              <MenuItem link="#">Từ 10 đến 15 triệu</MenuItem>
+              <MenuItem link="#">trên 15 triệu</MenuItem>
+            </VerticalMenu>
+          </div>
+
+          <div className="type_of_operating_system">
+            <h6>Loại điện thoại</h6>
+            <VerticalMenu>
+              <MenuItem link="#">Androi</MenuItem>
+              <MenuItem link="#">Iphone (IOS)</MenuItem>
+              <MenuItem link="#">Từ 10 đến 15 triệu</MenuItem>
+              <MenuItem link="#">trên 15 triệu</MenuItem>
+            </VerticalMenu>
+          </div>
+        </Col>
+      </Row>
+
+      <Row
+        ref={seeLaptops}
+        className="type_product_container type_product_container_laptops d-none"
+      >
+        <Col className="type_product_box" sm={8}>
+          <div className="manufactue_product">
+            <h6>Hãng Laptop</h6>
+            <VerticalMenu>
+              <MenuItem link="#">DELL</MenuItem>
+              <MenuItem link="#">LENOVO</MenuItem>
+              <MenuItem link="#">ASUS</MenuItem>
+              <MenuItem link="#">APPLE</MenuItem>
+              <MenuItem link="#">HP</MenuItem>
+            </VerticalMenu>
+          </div>
+
+          <div className="type_of_price">
+            <h6>Chọn theo mức giá</h6>
+            <VerticalMenu>
+              <MenuItem link="#">Dưới 10 triệu</MenuItem>
+              <MenuItem link="#">Từ 10 đến 20 triệu</MenuItem>
+              <MenuItem link="#">Từ 20 đến 30 triệu</MenuItem>
+              <MenuItem link="#">trên 30 triệu</MenuItem>
+            </VerticalMenu>
+          </div>
+
+          <div className="type_of_operating_system">
+            <h6>Chọn theo dòng</h6>
+            <VerticalMenu>
+              <MenuItem link="#">Laptop Core i5</MenuItem>
+              <MenuItem link="#">Laptop Core i3</MenuItem>
+              <MenuItem link="#">Laptop Core i7</MenuItem>
+              <MenuItem link="#">Laptop Core i9</MenuItem>
+            </VerticalMenu>
           </div>
         </Col>
       </Row>
