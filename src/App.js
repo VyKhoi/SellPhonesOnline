@@ -19,6 +19,9 @@ import React, { useContext } from "react";
 import CountContext from "./component/counterCart/countContext";
 
 import Test from "./component/layout/phongthinghiem";
+
+import SignUp from "./pages/signUp";
+import OrderLookup from "./pages/orderLookup";
 function App() {
   const { count, setCount } = useContext(CountContext);
   function add() {
@@ -31,10 +34,10 @@ function App() {
 
       <Home></Home>
 
-      {/* <Login></Login> */}
-
       <CartIcon count={count} />
       <button onClick={add}>oke</button>
+
+      <OrderLookup></OrderLookup>
       <Footer></Footer>
     </div>
   );
