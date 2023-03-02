@@ -19,6 +19,10 @@ import React, { useContext } from "react";
 import CountContext from "./component/counterCart/countContext";
 
 import Test from "./component/layout/phongthinghiem";
+import Cart from "./pages/cart";
+
+import Detail_Of_Product from "./pages/detailOfProduct";
+
 function App() {
   const { count, setCount } = useContext(CountContext);
   function add() {
@@ -27,14 +31,16 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Test></Test>
+      {/* <Test></Test>
 
-      <Home></Home>
+      <Home></Home> */}
 
       {/* <Login></Login> */}
 
-      <CartIcon count={count} />
-      <button onClick={add}>oke</button>
+      {/* <CartIcon count={count} />
+      <button onClick={add}>oke</button> */}
+      {/* <Cart></Cart> */}
+      <Detail_Of_Product></Detail_Of_Product>
       <Footer></Footer>
     </div>
   );
