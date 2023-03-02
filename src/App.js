@@ -19,9 +19,14 @@ import React, { useContext } from "react";
 import CountContext from "./component/counterCart/countContext";
 
 import Test from "./component/layout/phongthinghiem";
+
 import Cart from "./pages/cart";
 
 import Detail_Of_Product from "./pages/detailOfProduct";
+
+
+import SignUp from "./pages/signUp";
+import OrderLookup from "./pages/orderLookup";
 
 function App() {
   const { count, setCount } = useContext(CountContext);
@@ -35,12 +40,19 @@ function App() {
 
       <Home></Home> */}
 
+
       {/* <Login></Login> */}
 
       {/* <CartIcon count={count} />
       <button onClick={add}>oke</button> */}
       {/* <Cart></Cart> */}
       <Detail_Of_Product></Detail_Of_Product>
+
+      <CartIcon count={count} />
+      <button onClick={add}>oke</button>
+
+      <OrderLookup></OrderLookup>
+
       <Footer></Footer>
     </div>
   );
