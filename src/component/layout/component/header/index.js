@@ -10,6 +10,7 @@ import StickyBox from "react-sticky-box";
 import { useState, useEffect } from "react";
 import Login from "../../../../pages/login";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function Header() {
   const sticky = useRef(null);
 
@@ -113,9 +114,9 @@ function Header() {
           id="ftco-navbar"
         >
           <div className="container">
-            <a className="navbar-brand " id="logo_navbar" href="index.html">
+            <Link className="navbar-brand " id="logo_navbar" to={"/"}>
               Papermag <span>Magazine</span>
-            </a>
+            </Link>
             <form
               action="#"
               className="searchform order-sm-start order-lg-last"
@@ -149,21 +150,23 @@ function Header() {
             <div className="collapse navbar-collapse" id="ftco-nav">
               <ul className="navbar-nav m-auto">
                 <li className="nav-item active">
-                  <a href="#" className="nav-link">
+                  <Link to={"/"} className="nav-link">
                     Home
-                  </a>
+                  </Link>
                 </li>
+
                 <li className="nav-item dropdown branch" ref={dropdown}>
+                  <span className="makeup_see_branch">Xem giá tại</span>
                   <a
                     className="nav-link dropdown-toggle "
-                    href="#"
+                    href="#!"
                     id="dropdown04"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                     ref={branch}
                   >
-                    Cửa Hàng
+                    Cửa hàng Khôi Trọc
                   </a>
                   <div className="dropdown_contain">
                     <ul className="dropdown_menu">
@@ -190,18 +193,18 @@ function Header() {
                     </ul>
                   </div>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a href="#type_product_nav" className="nav-link">
                     DOANH MỤC
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <Link to={"/order_lookup"} className="nav-link">
                     TRA CỨU ĐƠN HÀNG
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item" onClick={handleLogin}>
-                  <a href="#" className="nav-link">
+                  <a href="#!" className="nav-link">
                     ĐĂNG NHẬP
                   </a>
                 </li>
@@ -211,8 +214,12 @@ function Header() {
         </nav>
       </div>
 
-      <Container ref={showLogin} className={"show_login d-none"}>
-        <Login></Login>
+      <Container
+        ref={showLogin}
+        className={"show_login d-none"}
+        id={"show_login"}
+      >
+        <Login myref={showLogin}></Login>
         <div className="blur_login" onClick={handleLogin}>
           {/* {" "}
           <i class="fa-regular fa-circle-xmark close_login"></i> */}

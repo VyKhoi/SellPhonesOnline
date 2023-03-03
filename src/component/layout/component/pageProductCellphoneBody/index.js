@@ -5,21 +5,19 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import HeaderType from "../headerType";
 import LogCellPhoneCard from "../logCellPhoneCard";
 import LogLaptopCard from "../logLaptopCard";
-// import LogNews from "../technologyNews";
-function HomeBody() {
+import LogNews from "../technologyNews";
+function PageProductCellphoneBody() {
   return (
-    <div className="container_body_content_page">
+    <Fragment>
       <HeaderType></HeaderType>
-      <h1>Danh sách điện thoại bán chạy</h1>
+      <h1>Danh sách điện thoạiđang khuyến mãi</h1>
       <LogCellPhoneCard></LogCellPhoneCard>
-      <h1>Laptop bán chạy</h1>
-      <LogLaptopCard></LogLaptopCard>
-      <h1>Phụ Kiện</h1>
+      <h1>DAnh sách điện thoại</h1>
       <LogCellPhoneCard></LogCellPhoneCard>
       <h2>Tin tức công nghệ</h2>
-      {/* <LogNews></LogNews> */}
-    </div>
+      <LogNews></LogNews>
+    </Fragment>
   );
 }
 
-export default HomeBody;
+export default PageProductCellphoneBody;

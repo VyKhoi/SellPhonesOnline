@@ -6,6 +6,7 @@ import VerticalMenu from "../verticalMenu/indext";
 import MenuItem from "../menuItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee, faL } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 function HeaderType() {
   // handle hover phone
   const seePhones = useRef(null);
@@ -115,6 +116,10 @@ function HeaderType() {
         ref={seePhones}
         className="type_product_container type_product_container_phones d-none"
       >
+        <Link className="see_full_product" to={"/cellphone"}>
+          Xem tất cả sản phẩm
+        </Link>
+
         <Col className="type_product_box" sm={8}>
           <div className="manufactue_product">
             <h6>Hãng điện thoại</h6>

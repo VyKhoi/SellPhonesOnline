@@ -6,20 +6,18 @@ import HeaderType from "../headerType";
 import LogCellPhoneCard from "../logCellPhoneCard";
 import LogLaptopCard from "../logLaptopCard";
 // import LogNews from "../technologyNews";
-function HomeBody() {
+function HomeBodyProductCellPhone() {
   return (
     <div className="container_body_content_page">
       <HeaderType></HeaderType>
       <h1>Danh sách điện thoại bán chạy</h1>
       <LogCellPhoneCard></LogCellPhoneCard>
-      <h1>Laptop bán chạy</h1>
-      <LogLaptopCard></LogLaptopCard>
-      <h1>Phụ Kiện</h1>
+
+      <h1>Danh sách điện thoại</h1>
       <LogCellPhoneCard></LogCellPhoneCard>
       <h2>Tin tức công nghệ</h2>
-      {/* <LogNews></LogNews> */}
     </div>
   );
 }
 
-export default HomeBody;
+export default HomeBodyProductCellPhone;

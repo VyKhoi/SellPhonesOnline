@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/js/bootstrap.min.js";
 import CountProvider from "./component/counterCart/provider";
+import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <CountProvider>
-      <App />
-    </CountProvider>
+    <BrowserRouter>
+      <CountProvider>
+        <App />
+      </CountProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

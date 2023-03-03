@@ -4,7 +4,7 @@ import HomeBody from "./component/layout/component/homeBody";
 
 import Footer from "./component/layout/component/footer";
 import CellPhoneCard from "./component/layout/component/cardCellphone";
-
+import "./static/css/globalStyle/style.css";
 import Home from "./pages/home";
 import LogCellPhoneCard from "./component/layout/component/logCellPhoneCard";
 
@@ -24,10 +24,10 @@ import Cart from "./pages/cart";
 
 import Detail_Of_Product from "./pages/detailOfProduct";
 
-
 import SignUp from "./pages/signUp";
 import OrderLookup from "./pages/orderLookup";
-
+import { Routes, Route, Link } from "react-router-dom";
+import PageProductCellphone from "./pages/pageProductCellphone/indext";
 function App() {
   const { count, setCount } = useContext(CountContext);
   function add() {
@@ -36,22 +36,20 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      {/* <Test></Test>
+      <Routes>
+        <Route path="/cart" element={<Cart></Cart>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/cellphone" element={<PageProductCellphone />}></Route>
+        <Route path="/register" element={<SignUp></SignUp>}></Route>
+        <Route
+          path="/order_lookup"
+          element={<OrderLookup></OrderLookup>}
+        ></Route>
+      </Routes>
 
-      <Home></Home> */}
-
-
-      {/* <Login></Login> */}
-
-      {/* <CartIcon count={count} />
-      <button onClick={add}>oke</button> */}
-      {/* <Cart></Cart> */}
-      <Detail_Of_Product></Detail_Of_Product>
-
-      <CartIcon count={count} />
-      <button onClick={add}>oke</button>
-
-      <OrderLookup></OrderLookup>
+      <Link to={"/cart"}>
+        <CartIcon count={count} />
+      </Link>
 
       <Footer></Footer>
     </div>

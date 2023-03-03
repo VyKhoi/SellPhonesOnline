@@ -94,11 +94,11 @@ function LogCellPhoneCard() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 20000,
   };
 
   let pages = Math.ceil(pro.length / 10);
