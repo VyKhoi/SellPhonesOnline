@@ -525,3 +525,14 @@ ul {
     justify-content: flex-start;
     border-bottom-right-radius: 5px
 }
+.introduce-of-product, .parameter-of-product{
+    justify-content: center;
+    font-size: 27px;
+    color: black !important;
+    font-weight: bolder;
+    align-items: center;
+    display: flex;
+}
+.border-detail{
+    
+}

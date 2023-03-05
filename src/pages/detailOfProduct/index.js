@@ -1,11 +1,11 @@
 import React from "react";
-
+import Comments from "../../component/layout/component/comments";
 import "../../static/css/component/DetailOfProduct/style.css"
 
-function Detail_Of_Product(){
-    return(
+function Detail_Of_Product() {
+    return (
         <div className="super_container detail_product">
-            <header className="header" style={{display: 'none'}}>
+            <header className="header" style={{ display: 'none' }}>
                 <div className="header_main">
                     <div className="container">
                         <div className="row">
@@ -31,17 +31,17 @@ function Detail_Of_Product(){
                 </div>
             </header>
             <div className="single_product">
-                <div className="container-fluid" style={{backgroundColor: '#fff', padding: 11}}>
+                <div className="container-fluid" style={{ backgroundColor: '#fff', padding: 11 }}>
                     <div className="row">
                         <div className="col-lg-2 order-lg-1 order-2">
                             <ul className="image_list">
-                                <li data-image="https://i.imgur.com/21EYMGD.jpg"><img src="https://i.imgur.com/21EYMGD.jpg" alt=""/></li>
-                                <li data-image="https://i.imgur.com/DPWSNWd.jpg"><img src="https://i.imgur.com/DPWSNWd.jpg" alt=""/></li>
-                                <li data-image="https://i.imgur.com/HkEiXfn.jpg"><img src="https://i.imgur.com/HkEiXfn.jpg" alt=""/></li>
+                                <li data-image="https://i.imgur.com/21EYMGD.jpg"><img src="https://i.imgur.com/21EYMGD.jpg" alt="" /></li>
+                                <li data-image="https://i.imgur.com/DPWSNWd.jpg"><img src="https://i.imgur.com/DPWSNWd.jpg" alt="" /></li>
+                                <li data-image="https://i.imgur.com/HkEiXfn.jpg"><img src="https://i.imgur.com/HkEiXfn.jpg" alt="" /></li>
                             </ul>
                         </div>
                         <div className="col-lg-4 order-lg-2 order-1">
-                            <div className="image_selected"><img src="https://i.imgur.com/qEwct2O.jpg" alt=""/></div>
+                            <div className="image_selected"><img src="https://i.imgur.com/qEwct2O.jpg" alt="" /></div>
                         </div>
                         <div className="col-lg-6 order-3">
                             <div className="product_description">
@@ -55,46 +55,44 @@ function Detail_Of_Product(){
                                 <div className="product_name">Acer Aspire 3 Celeron Dual Core - (2 GB/500 GB HDD/Windows 10 Home) A315-33 Laptop (15.6 inch, Black, 2.1 kg)</div>
                                 <div className="product-rating"><span className="badge badge-success"><i className="fa fa-star"></i> 4.5 Star</span> <span className="rating-review">35 Ratings & 45 Reviews</span></div>
                                 <div>
-  <span className="product_price">₹ 29,000</span>
-  <strike className="product_discount">
-    <span style={{ color: 'black' }}>₹ 2,000</span>
-  </strike>
-</div>
-<div>
-  <span className="product_saved">You Saved:</span>
-  <span style={{ color: 'black' }}>₹ 2,000</span>
-</div>
-<hr className="singleline" />
-<div>
-  <span className="product_info">
-    EMI starts at ₹ 2,000. No Cost EMI Available
-    <br />
-    Warranty: 6 months warranty
-    <br />
-    7 Days easy return policy
-    <br />
-    In Stock: 25 units sold this week
-  </span>
-</div>
-<div>
+                                    <span className="product_price">₹ 29,000</span>
+                                    <strike className="product_discount">
+                                        <span style={{ color: 'black' }}>₹ 2,000</span>
+                                    </strike>
+                                </div>
+                                <div>
+                                    <span className="product_saved">You Saved:</span>
+                                    <span style={{ color: 'black' }}>₹ 2,000</span>
+                                </div>
+                                <hr className="singleline" />
+                                <div>
+                                    <span className="product_info">
+                                        EMI starts at ₹ 2,000. No Cost EMI Available
+                                        <br />
+                                        Warranty: 6 months warranty
+                                        <br />
+                                        7 Days easy return policy
+                                        <br />
+                                        In Stock: 25 units sold this week
+                                    </span>
+                                </div>
+                                <div>
 
-  <div className="row" style={{ marginTop: '15px' }}>
-    <div className="col-xs-6" style={{ marginLeft: '15px' }}>
-      <span className="product_options">RAM Options</span>
-      <br />
-      <button className="btn btn-primary btn-sm">4 GB</button>
-      <button className="btn btn-primary btn-sm">8 GB</button>
-      <button className="btn btn-primary btn-sm">16 GB</button> </div>
-                                    <div className="col-xs-6" style={{marginLeft: 14}}> <span className="product_options">Storage Options</span><br/> <button className="btn btn-primary btn-sm">500 GB</button> <button className="btn btn-primary btn-sm">1 TB</button> </div>
+                                    <div className="row" style={{ marginTop: '15px' }}>
+                                        <div className="col-xs-6" style={{ marginLeft: '15px' }}>
+                                            <span className="product_options">RAM Options</span>
+                                            <br />
+                                            <button className="btn btn-primary btn-sm">4 GB</button>
+                                            <button className="btn btn-primary btn-sm">8 GB</button>
+                                            <button className="btn btn-primary btn-sm">16 GB</button> </div>
+                                        <div className="col-xs-6" style={{ marginLeft: 14 }}> <span className="product_options">Storage Options</span><br /> <button className="btn btn-primary btn-sm">500 GB</button> <button className="btn btn-primary btn-sm">1 TB</button> </div>
                                     </div>
                                 </div>
-                                <hr className="singleline"/>
-                                <div className="order_info d-flex flex-row">
-                                    <form action="#"/>
-                                </div>
+                                <hr className="singleline" />
+
                                 <div className="row">
-                                    <div className="col-xs-6" style={{marginLeft: 13}}>
-                                        <div className="product_quantity"> <span>QTY: </span> <input id="quantity_input" type="text" pattern="[0-9]*" value="1"/>
+                                    <div className="col-xs-6" style={{ marginLeft: 13 }}>
+                                        <div className="product_quantity"> <span>QTY: </span> <input id="quantity_input" type="text" pattern="[0-9]*" value="1" />
                                             <div className="quantity_buttons">
                                                 <div id="quantity_inc_button" className="quantity_inc quantity_control"><i className="fas fa-chevron-up"></i></div>
                                                 <div id="quantity_dec_button" className="quantity_dec quantity_control"><i className="fas fa-chevron-down"></i></div>
@@ -117,22 +115,22 @@ function Detail_Of_Product(){
                             <div className="row padding-2">
                                 <div className="col-md-5 padding-0">
                                     <div className="bbb_combo">
-                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt=""/></div>
-                                        <div className="d-flex flex-row justify-content-start"> <strike style={{color:'red'}}> <span className="fs-10" style={{color:'black'}}>₹ 32,000<span> </span></span></strike> <span className="ml-auto"><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i></span> </div>
-                                        <div className="d-flex flex-row justify-content-start" style={{marginBottom: 13}}> <span style={{marginTop: -4}}>₹30,000</span> <span className="ml-auto fs-10">23 Reviews</span> </div> <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
+                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
+                                        <div className="d-flex flex-row justify-content-start"> <strike style={{ color: 'red' }}> <span className="fs-10" style={{ color: 'black' }}>₹ 32,000<span> </span></span></strike> <span className="ml-auto"><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i></span> </div>
+                                        <div className="d-flex flex-row justify-content-start" style={{ marginBottom: 13 }}> <span style={{ marginTop: -4 }}>₹30,000</span> <span className="ml-auto fs-10">23 Reviews</span> </div> <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
                                     </div>
                                 </div>
                                 <div className="col-md-2 text-center"> <span className="step">+</span> </div>
                                 <div className="col-md-5 padding-0">
                                     <div className="bbb_combo">
-                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt=""/></div>
-                                        <div className="d-flex flex-row justify-content-start"> <strike style={{color:'red'}}> <span className="fs-10" style={{color:'black'}}>₹ 32,000<span> </span></span></strike> <span className="ml-auto"><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i></span> </div>
-                                        <div className="d-flex flex-row justify-content-start" style={{marginBottom: 13}}> <span style={{marginTop: -4}}>₹30,000</span> <span className="ml-auto fs-10">23 Reviews</span> </div> <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
+                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
+                                        <div className="d-flex flex-row justify-content-start"> <strike style={{ color: 'red' }}> <span className="fs-10" style={{ color: 'black' }}>₹ 32,000<span> </span></span></strike> <span className="ml-auto"><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i><i className="fa fa-star p-rating"></i></span> </div>
+                                        <div className="d-flex flex-row justify-content-start" style={{ marginBottom: 13 }}> <span style={{ marginTop: -4 }}>₹30,000</span> <span className="ml-auto fs-10">23 Reviews</span> </div> <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-xs-12" style={{marginLeft: 36}}>
+                                <div className="col-xs-12" style={{ marginLeft: 36 }}>
                                     <div className="boxo-pricing-items">
                                         <div className="combo-pricing-item"> <span className="items_text">1 Item</span> <span className="combo_item_price">₹13,200</span> </div>
                                         <div className="combo-plus"> <span className="plus-sign">+</span> </div>
@@ -146,55 +144,55 @@ function Detail_Of_Product(){
                         </div>
                         <div className="col-md-2 text-center"> <span className="vertical-line"></span> </div>
                         <div className="col-md-5" style={{ marginLeft: "-27px" }}>
-      <div className="row padding-2">
-        <div className="col-md-5 padding-0">
-          <div className="bbb_combo">
-            <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
-            <div className="d-flex flex-row justify-content-start">
-              <strike style={{ color: "red" }}>
-                <span className="fs-10" style={{ color: "black" }}>₹ 32,000</span>
-              </strike>
-              <span className="ml-auto">
-                <i className="fa fa-star p-rating"></i>
-                <i className="fa fa-star p-rating"></i>
-                <i className="fa fa-star p-rating p-rating"></i>
-                <i className="fa fa-star p-rating"></i>
-              </span>
-            </div>
-            <div className="d-flex flex-row justify-content-start" style={{ marginBottom: "13px" }}>
-              <span style={{ marginTop: "-4px" }}>₹30,000</span>
-              <span className="ml-auto fs-10">23 Reviews</span>
-            </div>
-            <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
-          </div>
-        </div>
-        <div className="col-md-2 text-center"><span className="step">+</span></div>
-        <div className="col-md-5 padding-0">
-          <div className="bbb_combo">
-            <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
-            <div className="d-flex flex-row justify-content-start">
-              <strike style={{ color: "red" }}>
-                <span className="fs-10" style={{ color: "black" }}>₹ 32,000</span>
-              </strike>
-              <span className="ml-auto">
-                <i className="fa fa-star p-rating"></i>
-                <i className="fa fa-star p-rating"></i>
-                <i className="fa fa-star p-rating"></i>
-                <i className="fa fa-star p-rating"></i>
-              </span>
-            </div>
-            <div className="d-flex flex-row justify-content-start" style={{ marginBottom: "13px" }}>
-              <span style={{ marginTop: "-4px" }}>₹30,000</span>
-              <span className="ml-auto fs-10">23 Reviews</span>
-            </div>
-            <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12" style={{ marginLeft: "36px" }}>
-          <div className="boxo-pricing-items">
-            <div className="combo-pricing-item"> <span className="items_text">1 Item</span> <span className="combo_item_price">₹13,200</span> </div>
+                            <div className="row padding-2">
+                                <div className="col-md-5 padding-0">
+                                    <div className="bbb_combo">
+                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
+                                        <div className="d-flex flex-row justify-content-start">
+                                            <strike style={{ color: "red" }}>
+                                                <span className="fs-10" style={{ color: "black" }}>₹ 32,000</span>
+                                            </strike>
+                                            <span className="ml-auto">
+                                                <i className="fa fa-star p-rating"></i>
+                                                <i className="fa fa-star p-rating"></i>
+                                                <i className="fa fa-star p-rating p-rating"></i>
+                                                <i className="fa fa-star p-rating"></i>
+                                            </span>
+                                        </div>
+                                        <div className="d-flex flex-row justify-content-start" style={{ marginBottom: "13px" }}>
+                                            <span style={{ marginTop: "-4px" }}>₹30,000</span>
+                                            <span className="ml-auto fs-10">23 Reviews</span>
+                                        </div>
+                                        <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
+                                    </div>
+                                </div>
+                                <div className="col-md-2 text-center"><span className="step">+</span></div>
+                                <div className="col-md-5 padding-0">
+                                    <div className="bbb_combo">
+                                        <div className="bbb_combo_image"><img className="bbb_combo_image" src="https://i.imgur.com/K4b71NV.jpg" alt="" /></div>
+                                        <div className="d-flex flex-row justify-content-start">
+                                            <strike style={{ color: "red" }}>
+                                                <span className="fs-10" style={{ color: "black" }}>₹ 32,000</span>
+                                            </strike>
+                                            <span className="ml-auto">
+                                                <i className="fa fa-star p-rating"></i>
+                                                <i className="fa fa-star p-rating"></i>
+                                                <i className="fa fa-star p-rating"></i>
+                                                <i className="fa fa-star p-rating"></i>
+                                            </span>
+                                        </div>
+                                        <div className="d-flex flex-row justify-content-start" style={{ marginBottom: "13px" }}>
+                                            <span style={{ marginTop: "-4px" }}>₹30,000</span>
+                                            <span className="ml-auto fs-10">23 Reviews</span>
+                                        </div>
+                                        <span>Acer laptop with 10GB RAM + 500 GB Hard Disk</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-xs-12" style={{ marginLeft: "36px" }}>
+                                    <div className="boxo-pricing-items">
+                                        <div className="combo-pricing-item"> <span className="items_text">1 Item</span> <span className="combo_item_price">₹13,200</span> </div>
                                         <div className="combo-plus"> <span className="plus-sign">+</span> </div>
                                         <div className="combo-pricing-item"> <span className="items_text">1 Add-on</span> <span className="combo_item_price">₹500</span> </div>
                                         <div className="combo-plus"> <span className="plus-sign">=</span> </div>
@@ -210,11 +208,15 @@ function Detail_Of_Product(){
                         <div className="col-md-6"> <a href="#" data-abc="true"> <span className="ml-auto view-all"></span> </a> </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-8 border-detail">
+                            <h2 className="introduce-of-product">ĐẶC ĐIỂM NỔI BẬT</h2>
+                        </div>
+                        <div className="col-md-4 border-detail">
+                            <h2 className="parameter-of-product">THÔNG SỐ KĨ THUẬT</h2>
                             <table className="col-md-12">
                                 <tbody>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Sales Package :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Sales Package</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li>2 in 1 Laptop, Power Adaptor, Active Stylus Pen, User Guide, Warranty Documents</li>
@@ -222,7 +224,7 @@ function Detail_Of_Product(){
                                         </td>
                                     </tr>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Model Number :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Model Number</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li> 14-dh0107TU </li>
@@ -230,7 +232,7 @@ function Detail_Of_Product(){
                                         </td>
                                     </tr>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Part Number :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Part Number</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li>7AL87PA</li>
@@ -238,7 +240,7 @@ function Detail_Of_Product(){
                                         </td>
                                     </tr>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Color :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Color</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li>Black</li>
@@ -246,7 +248,7 @@ function Detail_Of_Product(){
                                         </td>
                                     </tr>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Suitable for :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Suitable for</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li>Processing & Multitasking</li>
@@ -254,7 +256,7 @@ function Detail_Of_Product(){
                                         </td>
                                     </tr>
                                     <tr className="row mt-10">
-                                        <td className="col-md-4"><span className="p_specification">Processor Brand :</span> </td>
+                                        <td className="col-md-4"><span className="p_specification">Processor Brand</span> </td>
                                         <td className="col-md-8">
                                             <ul>
                                                 <li>Intel</li>
@@ -267,6 +269,9 @@ function Detail_Of_Product(){
                     </div>
                 </div>
             </div>
-    </div>)
+            <Comments></Comments>
+        </div>
+
+    )
 }
 export default Detail_Of_Product
