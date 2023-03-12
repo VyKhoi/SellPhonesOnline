@@ -13,10 +13,12 @@ function Login({ myref }) {
     console.log("coclick");
     if (t.classList.contains("d-block") === false) {
       t.classList.add("d-block");
+      t.classList.remove("d-none");
       return;
     }
     if (t.classList.contains("d-block")) {
       t.classList.remove("d-block");
+      t.classList.add("d-none");
       return;
     }
   }
@@ -63,15 +65,15 @@ function Login({ myref }) {
                     </div>
 
                     <div className="d-flex mb-5 align-items-center">
-                      <label className="control control--checkbox mb-0">
+                      {/* <label className="control control--checkbox mb-0">
                         <span className="caption">Remember me</span>
                         <input type="checkbox" checked="checked" />
                         <div className="control__indicator"></div>
-                      </label>
+                      </label> */}
                       <Link to={"/register"} onClick={handleRegister}>
                         <span className="ml-auto">
                           <a href="#" className="forgot-pass">
-                            Register
+                            Đăng Ký tài khoãn
                           </a>
                         </span>
                       </Link>

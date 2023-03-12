@@ -6,13 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/js/bootstrap.min.js";
 import CountProvider from "./component/counterCart/provider";
 import { BrowserRouter } from "react-router-dom";
+import ProductProvider from "./component/storeProduct/provider";
+import { CartProvider } from "./component/cart/CartContext";
+import { BranchProvider } from "./component/branchSelect/BranchContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CountProvider>
-        <App />
-      </CountProvider>
+      <BranchProvider>
+        <CartProvider>
+          <CountProvider>
+            <ProductProvider>
+              <App />
+            </ProductProvider>
+          </CountProvider>
+        </CartProvider>
+      </BranchProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

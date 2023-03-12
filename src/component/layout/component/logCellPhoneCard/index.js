@@ -7,138 +7,45 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-let pro = [
-  {
-    image: "https://example.com/image1.jpg",
-    name: "Product 1",
-    price: 10.99,
-  },
-  {
-    image: "https://example.com/image2.jpg",
-    name: "Product 2",
-    price: 20.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-];
+function LogCellPhoneCard({ listPhones }) {
+  if (!listPhones || !listPhones.length) {
+    return <h1>Trống</h1>;
+  }
 
-function LogCellPhoneCard() {
+  // listPhones.sort(() => Math.random() - 0.5);
   var settings = {
     dots: true,
     infinite: true,
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 20000,
   };
 
-  let pages = Math.ceil(pro.length / 10);
-
-  let indext = 0;
+  let pages = Math.ceil(listPhones.length / 10);
   let container_card = [];
 
-  // this is use to save slice pro
-  let list_pro = [];
-  let start = 0;
-  let end = 10;
-
   for (let i = 0; i < pages; i++) {
-    // check dieu kien
-    if (pro.length < 10) {
-      list_pro = pro.slice(0);
-    }
-    if (end > pro.length) {
-      list_pro = pro.slice(start);
-    }
+    let start = i * 10;
+    let end = (i + 1) * 10;
+    let list_pro = listPhones.slice(start, end);
 
-    list_pro = pro.slice(start, end); //start , end
+    let cards = list_pro.map((phone, index) => {
+      return (
+        <CellPhoneCard
+          key={index}
+          className={"card_cellphone"}
+          product={phone}
+        ></CellPhoneCard>
+      );
+    });
 
     container_card.push(
       <div className="container_log_cell_phone">
-        <Container className="log_cell_phone">
-          {list_pro.map((index, p) => {
-            return (
-              <CellPhoneCard
-                key={index}
-                className={"card_cellphone"}
-              ></CellPhoneCard>
-            );
-          })}
-        </Container>
+        <Container className="log_cell_phone">{cards}</Container>
       </div>
     );
-
-    start += 10;
-    end += 10;
   }
 
   return (
@@ -147,5 +54,4 @@ function LogCellPhoneCard() {
     </Slider>
   );
 }
-
 export default LogCellPhoneCard;

@@ -95,13 +95,33 @@
 .laptop_card_infor .product-price-btn p {
     display: inline-block;
     position: absolute;
-    top: -13px;
+    top: -91px;
     height: 50px;
     font-family: 'Trocchi', serif;
-    margin: 0 0 0 38px;
-    font-size: 28px;
+    margin: 47px 0 0 -28px;
+    font-size: 13px;
     font-weight: lighter;
     color: #474747;
+}
+
+.price_laptop_box p span {
+    font-size: 20px;
+}
+
+.previous_price {
+    text-decoration: line-through;
+}
+
+.sale_price_laptop {
+    color: red;
+}
+
+.container_discount.discount_laptop {
+    font-size: 10px;
+    display: inline-block;
+    padding: 5px;
+    /* margin: 0; */
+    height: 100%;
 }
 
 .laptop_card span {

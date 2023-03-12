@@ -6,101 +6,24 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../../../static/css/component/logLaptopCard/style.css";
-let pro = [
-  {
-    image: "https://example.com/image1.jpg",
-    name: "Product 1",
-    price: 10.99,
-  },
-  {
-    image: "https://example.com/image2.jpg",
-    name: "Product 2",
-    price: 20.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-  {
-    image: "https://example.com/image3.jpg",
-    name: "Product 3",
-    price: 30.99,
-  },
-];
 
-function LogLaptopCard() {
+function LogLaptopCard({ listLaptop }) {
+  if (!listLaptop || !listLaptop.length) {
+    return <h1>Trống</h1>;
+  }
+
+  console.log("laptop", { listLaptop });
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
   };
 
-  let pages = Math.ceil(pro.length / 10);
+  let pages = Math.ceil(listLaptop.length / 10);
 
   let indext = 0;
   let container_card = [];
@@ -112,21 +35,25 @@ function LogLaptopCard() {
 
   for (let i = 0; i < pages; i++) {
     // check dieu kien
-    if (pro.length < 10) {
-      list_pro = pro.slice(0);
+    if (listLaptop.length < 10) {
+      list_pro = listLaptop.slice(0);
     }
-    if (end > pro.length) {
-      list_pro = pro.slice(start);
+    if (end > listLaptop.length) {
+      list_pro = listLaptop.slice(start);
     }
 
-    list_pro = pro.slice(start, end); //start , end
+    list_pro = listLaptop.slice(start, end); //start , end
 
     container_card.push(
       <div className="container_log_laptop">
         <Container className="log_laptop">
-          {list_pro.map((index, p) => {
+          {list_pro.map((product, index) => {
             return (
-              <LaptopCard key={index} className={"card_laptop"}></LaptopCard>
+              <LaptopCard
+                key={index}
+                className={"card_laptop"}
+                product={product}
+              ></LaptopCard>
             );
           })}
         </Container>

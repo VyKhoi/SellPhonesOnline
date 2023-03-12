@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 import axios from "axios";
-function Test() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios.get("http://localhost:8000/khoi/oke").then((response) => {
-      setMessage(response.data.message);
-    });
-  }, []);
-
+function Test({ listPhones }) {
   return (
-    <div>
-      <h2>data ơ đây</h2>
-      <h1>{message}</h1>
-    </div>
+    <Fragment>
+      <h1>do day la {listPhones.length}</h1>
+      <div>
+        {listPhones.map((phone) => (
+          <p>
+            {phone.name} - {phone.model}
+          </p>
+        ))}
+      </div>
+    </Fragment>
   );
 }
 export default Test;

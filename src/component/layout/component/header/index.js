@@ -7,15 +7,16 @@ import "../../../../static/js/component/header/index";
 import MyCarousel from "../carousel";
 
 import StickyBox from "react-sticky-box";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Login from "../../../../pages/login";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { BranchContext } from "../../../branchSelect/BranchContext";
 function Header() {
   const sticky = useRef(null);
 
   const branch = useRef(null);
-
+  const { branchID, setBranchID } = useContext(BranchContext);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -41,18 +42,23 @@ function Header() {
     console.log("coclick");
     if (showLogin.current.classList.contains("d-block") === false) {
       showLogin.current.classList.add("d-block");
+      showLogin.current.classList.remove("d-none");
       return;
     }
     if (showLogin.current.classList.contains("d-block")) {
       showLogin.current.classList.remove("d-block");
+      showLogin.current.classList.add("d-none");
       return;
     }
     console.log(showLogin);
   }
 
   // handle click change bramch
-  function handleClickBranch(e) {
-    branch.current.innerText = e.target.innerText;
+  function handleClickBranch(event, id) {
+    // event.preventDefault();
+    console.log("id branch la", id);
+    branch.current.innerText = event.target.innerText;
+    setBranchID(id);
   }
 
   return (
@@ -155,7 +161,7 @@ function Header() {
                   </Link>
                 </li>
 
-                <li className="nav-item dropdown branch" ref={dropdown}>
+                <li className="nav-item dropdown branch">
                   <span className="makeup_see_branch">Xem giá tại</span>
                   <a
                     className="nav-link dropdown-toggle "
@@ -166,30 +172,33 @@ function Header() {
                     aria-expanded="false"
                     ref={branch}
                   >
-                    Cửa hàng Khôi Trọc
+                    Cửa hàng 1
                   </a>
                   <div className="dropdown_contain">
                     <ul className="dropdown_menu">
                       <li>
-                        <a href="#!" onClick={handleClickBranch}>
-                          Cửa hàng Chấn Bột
+                        <a href="#!" onClick={(e) => handleClickBranch(e, 1)}>
+                          Cửa hàng 1
                         </a>
                       </li>
                       <li>
-                        <a href="#!" onClick={handleClickBranch}>
-                          Cửa hàng Khôi Trọc
+                        <a href="#!" onClick={(e) => handleClickBranch(e, 2)}>
+                          Cửa hàng 2
                         </a>
                       </li>
                       <li>
-                        <a href="#!" onClick={handleClickBranch}>
-                          Cửa hàng Luân Wibu
+                        <a href="#!" onClick={(e) => handleClickBranch(e, 3)}>
+                          Cửa hàng 3
                         </a>
                       </li>
-                      <li>
-                        <a href="#!" onClick={handleClickBranch}>
+                      {/* <li>
+                        <a
+                          href="#!"
+                          onClick={() => handleClickBranch(idbranch)}
+                        >
                           Cửa hàng Nam mít
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </li>

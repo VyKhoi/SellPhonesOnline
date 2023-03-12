@@ -11,12 +11,15 @@ function HeaderType() {
   // handle hover phone
   const seePhones = useRef(null);
   function handleSeePhones() {
+    console.log("có lick handleSeePhones");
     if (seePhones.current.classList.contains("d-block") === false) {
       seePhones.current.classList.add("d-block");
+      seePhones.current.classList.remove("d-none");
       return;
     }
     if (seePhones.current.classList.contains("d-block")) {
       seePhones.current.classList.remove("d-block");
+      seePhones.current.classList.add("d-none");
       return;
     }
   }
@@ -24,12 +27,16 @@ function HeaderType() {
   // handle hover Laptop
   const seeLaptops = useRef(null);
   function handleSeeLaptops() {
+    console.log("có lick handleSeeLaptops");
+
     if (seeLaptops.current.classList.contains("d-block") === false) {
       seeLaptops.current.classList.add("d-block");
+      seeLaptops.current.classList.remove("d-none");
       return;
     }
     if (seeLaptops.current.classList.contains("d-block")) {
       seeLaptops.current.classList.remove("d-block");
+      seeLaptops.current.classList.add("d-none");
       return;
     }
   }
@@ -162,6 +169,9 @@ function HeaderType() {
         ref={seeLaptops}
         className="type_product_container type_product_container_laptops d-none"
       >
+        <Link className="see_full_product" to={"/laptop"}>
+          Xem tất cả sản phẩm
+        </Link>
         <Col className="type_product_box" sm={8}>
           <div className="manufactue_product">
             <h6>Hãng Laptop</h6>
