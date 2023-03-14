@@ -9,18 +9,21 @@ import { BrowserRouter } from "react-router-dom";
 import ProductProvider from "./component/storeProduct/provider";
 import { CartProvider } from "./component/cart/CartContext";
 import { BranchProvider } from "./component/branchSelect/BranchContext";
+import { TypeOfProductProvider } from "./component/typeOfProduct/context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <BranchProvider>
-        <CartProvider>
-          <CountProvider>
-            <ProductProvider>
-              <App />
-            </ProductProvider>
-          </CountProvider>
-        </CartProvider>
+        <TypeOfProductProvider>
+          <CartProvider>
+            <CountProvider>
+              <ProductProvider>
+                <App />
+              </ProductProvider>
+            </CountProvider>
+          </CartProvider>
+        </TypeOfProductProvider>
       </BranchProvider>
     </BrowserRouter>
   </React.StrictMode>

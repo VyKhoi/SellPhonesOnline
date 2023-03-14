@@ -5,7 +5,7 @@ function Comments({ idProduct }) {
   const iconColors = ["#00FF00", "#FFFFFF", "#FFFF00"];
   useEffect(() => {
     // http://localhost:3001/comments-product/${idProduct}
-    fetch(`http://localhost:3001/comments-product`)
+    fetch(`http://localhost:8000/home/comments/${idProduct}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -41,7 +41,7 @@ function Comments({ idProduct }) {
                     class="fa-solid fa-user-astronaut icon_user_comment"
                     style={{ color: iconColor }}
                   ></i>
-                  <h4>{comment.nameUser}</h4>
+                  <h4>{comment.userName}</h4>
                   <br />
                   <p>{comment.contentComment}</p>
                 </div>

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function LogCellPhoneCard({ listPhones }) {
+  console.log("render lai log cell phone card");
   if (!listPhones || !listPhones.length) {
     return <h1>Trống</h1>;
   }

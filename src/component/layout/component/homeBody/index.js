@@ -18,7 +18,7 @@ function HomeBody() {
   // thay "brand" bằng giá trị mặc định của defaultBrach
 
   useEffect(() => {
-    fetch(`http://localhost:3001/Laptop?Brach=${branchID}`)
+    fetch(`http://localhost:8000/home/branch/${branchID}/laptops`)
       .then((response) => response.json())
       .then((data) => {
         setListLaptop(data);
@@ -30,11 +30,12 @@ function HomeBody() {
 
   useEffect(() => {
     // `http://localhost:3001/Smartphone?Brach=${defaultBrach}`
-    fetch(`http://localhost:8000/home/branch/${branchID}/`)
+    fetch(`http://localhost:8000/home/branch/${branchID}/phones`)
       .then((response) => response.json())
       .then((data) => {
         console.log("no co chay vo ham lay dât", data);
         setListPhones(data);
+        console.log("no co chay lay lai hang cua cua hang", branchID);
       })
       .catch((error) => {
         console.error(error);
@@ -50,8 +51,8 @@ function HomeBody() {
       )}
       <h1>Laptop bán chạy</h1>
       {listLaptop && <LogLaptopCard listLaptop={listLaptop}></LogLaptopCard>}
-      <h1>Phụ Kiện</h1>
-      <LogCellPhoneCard></LogCellPhoneCard>
+      {/* <h1>Phụ Kiện</h1>
+      <LogCellPhoneCard></LogCellPhoneCard> */}
       <h2>Tin tức công nghệ</h2>
       <LogNews></LogNews>
       {/* <Test listPhones={listPhones}></Test> */}

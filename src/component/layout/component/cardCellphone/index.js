@@ -1,18 +1,34 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../../../static/css/component/cellPhoneCard/style.css";
 import CountContext from "../../../counterCart/countContext";
 import CartContext from "../../../cart/CartContext";
-
+import { TypeOfProductContext } from "../../../typeOfProduct/context";
 function CellPhoneCard({ product }) {
+  const { typeOfProduct, handleSetTypeOfProduct } =
+    useContext(TypeOfProductContext);
+  const handleClick = () => {
+    handleSetTypeOfProduct(1);
+  };
+
   // console.log("product truyen vao", product.name);
   const click = useRef(null);
+  useEffect(() => {
+    if (click.current) {
+      click.current.classList.remove("clicked");
+    }
+  }, [product]);
   // counter cart
   const { count, setCount } = useContext(CountContext);
 
   const { cartItems, removeFromCart, addToCart } = useContext(CartContext);
 
   function Clicked() {
+    // click.current.classList.add("clicked");
+    // addToCart({ ...product });
+    // console.log("san pham trong cart la", cartItems);
+    // setCount(count + 1);
+
     click.current.classList.add("clicked");
     addToCart({ ...product });
     console.log("san pham trong cart la", cartItems);
@@ -35,7 +51,7 @@ function CellPhoneCard({ product }) {
   return (
     <div className="wrapper cellPhoneCard">
       <div className="container">
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/product/${product.id}`} onClick={handleClick}>
           <div className="top img_product_mini">
             <img src={product.currentImage}></img>
           </div>
@@ -73,7 +89,7 @@ function CellPhoneCard({ product }) {
             <div
               className="remove"
               onClick={() => {
-                UnClicked(product.id);
+                UnClicked(product.id_product_color);
               }}
             >
               <i class="fa-solid fa-xmark"></i>

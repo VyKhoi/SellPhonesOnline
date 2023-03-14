@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, Fragment } from "react";
 import Comments from "../../component/layout/component/comments";
 import "../../static/css/component/DetailOfProduct/style.css";
 import { useContext } from "react";
@@ -7,6 +7,7 @@ import { Link, useParams } from "react-router-dom";
 import { map } from "jquery";
 import CartContext from "../../component/cart/CartContext";
 import { BranchContext } from "../../component/branchSelect/BranchContext";
+import { TypeOfProductContext } from "../../component/typeOfProduct/context";
 function Detail_Of_Product() {
   console.log("render detail_product");
   // // lay sphttp://localhost:3001/product-cell-phone/1
@@ -24,6 +25,9 @@ function Detail_Of_Product() {
   const { cartItems, removeFromCart, addToCart } = useContext(CartContext);
   // check da them vao chưa
   const [showMessage, setShowMessage] = useState(false);
+  const { typeOfProduct, handleSetTypeOfProduct } =
+    useContext(TypeOfProductContext);
+
   const handleAddToCart = () => {
     console.log("co chay");
     const updatedProduct = {
@@ -77,7 +81,9 @@ function Detail_Of_Product() {
   };
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/home/branch/${branchID}/product/${id}/`)
+    fetch(
+      `http://127.0.0.1:8000/home/branch/${branchID}/product/${id}/type/${typeOfProduct}`
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log("no co lay duoc dâta", data[0]);
@@ -106,19 +112,36 @@ function Detail_Of_Product() {
     () => list_Id_product_color,
     [list_Id_product_color]
   );
+
   function showIDCORLOR() {
     console.log(list_Id_product_color);
     console.log("id mau sac product", current_id_product_color);
+    if (typeOfProduct) {
+      console.log(typeOfProduct);
+    } else {
+      console.log("khong co type ò product");
+    }
   }
 
   if (!product) {
-    return <h1>Loading...</h1>;
+    return (
+      <Fragment>
+        <h1>Loading...</h1>;<button onClick={showIDCORLOR}>showIDCORLOR</button>
+      </Fragment>
+    );
   }
+
+  // xem type cua san pham
+
+  const handleWatchTypeOfProduct = () => {
+    // handleSetTypeOfProduct("newTypeOfProduct");
+    console.log(typeOfProduct);
+  };
 
   return (
     <div className="super_container detail_product">
       <button onClick={showIDCORLOR}>showIDCORLOR</button>
-
+      <button onClick={handleWatchTypeOfProduct}>type ò product </button>
       <header className="header" style={{ display: "none" }}>
         <div className="header_main">
           <div className="container">
@@ -213,7 +236,9 @@ function Detail_Of_Product() {
                   </strike>
                 </div>
                 <div>
-                  <span className="product_saved">You Saved:</span>
+                  <span className="product_saved">
+                    You Saved: {product.discountRate * 100}% {"=> "}
+                  </span>
                   <span style={{ color: "black" }}>
                     {selectedColor.price * product.discountRate}
                   </span>
